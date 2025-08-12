@@ -12,9 +12,15 @@ const Footer = () => {
 
         <div className='flex gap-2.5'>
             {/* social media links */}
-            <img src={assets.facebook_icon} alt="" width={35}/>
-            <img src={assets.twitter_icon} alt="" width={35}/>
+            <a href="http://www.linkedin.com/in/anurag-singh81105/" target='_blank'>
+            <img src={assets.linkedin_icon} alt="" width={35}/>
+            </a>
+            <a href='https://github.com/Anurag-Singh-08' target='_blank'>
+            <img src={assets.github_icon} alt="" width={35}/>
+            </a>
+            <a href='' target="_blank">
             <img src={assets.instagram_icon} alt="" width={35}/>
+            </a>
         </div>
 
     </div>
