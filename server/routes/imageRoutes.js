@@ -1,10 +1,16 @@
-import express from 'express'
-import { generateImage } from '../controllers/imageController.js'
-import userAuth from '../middlewares/auth.js'
+import express from "express";
+import { generateImage, saveImage, getImages } from "../controllers/imageController.js";
+import userAuth from "../middlewares/auth.js";
 
-const imageRouter = express.Router()
+const imageRouter = express.Router();
 
-imageRouter.post('/generate-image', userAuth , generateImage)
+// Generate a new image
+imageRouter.post("/generate-image", userAuth, generateImage);
 
+// Save generated image
+imageRouter.post("/save-image", userAuth, saveImage);
 
-export default imageRouter
+// Get all saved images for logged-in user
+imageRouter.get("/get-images", userAuth, getImages);
+
+export default imageRouter;
